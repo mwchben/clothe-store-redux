@@ -1,4 +1,4 @@
-//takes initial state and the action
+//takes initial state and the action (action has type i.e selected_product & payload i.e product)
 
 import { ActionTypes } from "../constants/action-types";
 
@@ -16,10 +16,10 @@ export function productReducer (state,{type,payload}){
     switch (type) {
         case ActionTypes.SET_PRODUCTS:
             
-            break;
+            return state;
     
         default:
-            break;
+            return state;
     }
 
 }
