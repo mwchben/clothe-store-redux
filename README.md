@@ -2,6 +2,7 @@
 # Web-App that manages a a fake shop
 
 This app introduces me to the working of react-redux and the use of reducers, actions and stores. 
+Component in React -> Action (dispatched to the) -> Reducer(Acts on the) -> Store.
 
 Store - as the name implies, it's like a storehouse that house all our data. That is, where all our states are stored.
 
