@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
-import reducers from './reducers/index ';
+import reducers from './reducers';
 
 //createStore (reducer, [preloadedState], [enhancer]) Creates a Redux store that holds the complete state
 // tree of your app. There should only be a single store in your app.
