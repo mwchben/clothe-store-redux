@@ -9,10 +9,10 @@ const initialState = {
             title: "Benja",
             category: "Learner"
         },
-    ]
+    ] 
 };
 
-export function productReducer (state,{type,payload}){
+export function productReducer (state = initialState, {type,payload}){
     switch (type) {
         case ActionTypes.SET_PRODUCTS:
             

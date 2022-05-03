@@ -1,4 +1,4 @@
-import { createStore } from "react-redux";
+import { createStore } from 'redux';
 import reducers from './reducers/index ';
 
 //createStore (reducer, [preloadedState], [enhancer]) Creates a Redux store that holds the complete state
