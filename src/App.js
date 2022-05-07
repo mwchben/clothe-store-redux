@@ -10,8 +10,8 @@ function App() {
       <Header/>
       <Router>
       <Routes>
-            <Route path='/' exact component={ProductListing} />
-            <Route path='/:productId' exact component={ProductDetails} />
+            <Route path='/' exact element={<ProductListing/>} />
+            <Route path='/:productId' exact element={<ProductDetails/>} />
       </Routes>
       </Router>
     </div>
