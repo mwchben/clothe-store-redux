@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import ProductComponent from './product-component';
 
 const ProductListing = () => {
     
@@ -9,8 +10,8 @@ const ProductListing = () => {
 
     return (
     <div className='ui grid container'>
-        <br></br>
-        <h4>ProductListing</h4>
+        
+        <ProductComponent />
     </div>
     );
 }
