@@ -1,6 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 const ProductDetails = () => {
+
+    const { productID } =useParams();
+    console.log(productID);
+
     return (
     <div >
         <br></br>
