@@ -6,28 +6,29 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const ProductDetails = () => {
 
-    const product = useSelector((state) => state.product);
+    const product = useSelector(state => state.product);
     const { productId } = useParams();
     const dispatch = useDispatch;
-    console.log(product);
+    console.log(productId);
 
-    const url = `https://fakestoreapi.com/products/${productId}`;
+    
 
     const fetchProductsDetails = async() => {
+
+        const url = `https://fakestoreapi.com/products/${productId}`;
         const resp = await axios
         .get(url)
-        .catch((error)=> {
-            console.log('error',error)
+        .catch((err) => {
+            console.log('err',err)
         })
 
         dispatch(selectedProduct(resp.data));
     } 
 
+
     useEffect(() => {
-            if (productId && productId !== ""){
-                fetchProductsDetails();
-            } 
-        //dispatch setProducts action to store the data to the redux store
+            if (productId && productId !== "") fetchProductsDetails();
+            
     },[productId])
 
 
