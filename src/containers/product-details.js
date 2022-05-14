@@ -8,8 +8,8 @@ const ProductDetails = () => {
 
     const product = useSelector(state => state.product);
     const { productId } = useParams();
-    const dispatch = useDispatch;
-    console.log(productId);
+    const dispatch = useDispatch();
+    console.log(product);
 
     
 
