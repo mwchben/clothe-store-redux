@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { selectedProduct } from '../redux/actions/product-action';
+import { selectedProduct, removeSelectedProduct } from '../redux/actions/product-action';
 import { useDispatch, useSelector } from 'react-redux';
 
 const ProductDetails = () => {
@@ -30,6 +30,9 @@ const ProductDetails = () => {
 
     useEffect(() => {
             if (productId && productId !== "") fetchProductsDetails();
+            return () => {
+                dispatch(removeSelectedProduct())
+            }
             
     },[productId])
 
